@@ -1,0 +1,25 @@
+/*    define extend
+==========================================================*/
+.__flex{
+  @include css3flex;
+}
+
+.flex-middle{
+  @extend .__flex;
+  -webkit-box-align:center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.flex-center{
+  @extend .__flex;
+  -webkit-box-pack:center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.flex-mc{
+  @extend .__flex;
+  @extend .flex-middle;
+  @extend .flex-center;
+}

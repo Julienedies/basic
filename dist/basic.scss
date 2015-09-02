@@ -48,6 +48,7 @@ $countRemBase : 22;
   width:$size/$countRemBase * 1rem;
 }
 
+
 @mixin linear-gradient($from, $to) {
   /* Fallback for sad browsers */
   background-color: $to;
@@ -84,13 +85,24 @@ $countRemBase : 22;
   justify-content: center;
 }
 
+.flex-justify{
+  @extend .__flex;
+  -webkit-box-pack:justify;
+  -webkit-justify-content:space-between;
+  justify-content:space-between
+}
+
 .flex-mc{
   @extend .__flex;
   @extend .flex-middle;
   @extend .flex-center;
 }
 
-
+.flex-mj{
+  @extend .__flex;
+  @extend .flex-middle;
+  @extend .flex-justify;
+}
 /*
 字体样式定义
 =========================================================
@@ -312,6 +324,10 @@ input{
 
 a{
     text-decoration: none;
+}
+
+*{
+  box-sizing: border-box;
 }
 
 /*

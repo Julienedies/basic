@@ -18,9 +18,21 @@
   justify-content: center;
 }
 
+.flex-justify{
+  @extend .__flex;
+  -webkit-box-pack:justify;
+  -webkit-justify-content:space-between;
+  justify-content:space-between
+}
+
 .flex-mc{
   @extend .__flex;
   @extend .flex-middle;
   @extend .flex-center;
 }
 
+.flex-mj{
+  @extend .__flex;
+  @extend .flex-middle;
+  @extend .flex-justify;
+}

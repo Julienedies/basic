@@ -34,69 +34,7 @@ d 属性名display首字母
 f  属性值flex首字母
 example：d-f{display:flex}
 */
-.f-a{
-    -webkit-flex:auto;
-    flex:auto;
-}
 
-.ws-n{
-    white-space: nowrap;
-}
-
-.va-b{
-    vertical-align: bottom;
-}
-.f-l{
-    float:left;
-}
-.f-r{
-    float:right;
-}
-.ta-r{
-    text-align: right;
-}
-.ta-c{
-    text-align: center;
-}
-.p-r{
-    position: relative;
-}
-.p-f{
-    position: fixed;
-}
-.d-f{
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-}
-.d-ib{
-    display: inline-block;
-}
-.d-n{
-    display: none;
-}
-/*
-*/
-.clearfix:after{
-    content: '';
-    display: block;
-    clear:both;
-    height: 0;
-}
-/*
-*/
-.clearfix:after{
-    content: '';
-    display: block;
-    clear:both;
-    height: 0;
-}
-
-/**/
-.line{
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+.relative{
+  position: relative;
 }

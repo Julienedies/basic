@@ -29,12 +29,17 @@ a{
 
 /*
 常用属性简写定义规则：
-d 属性名display首字母
--
-f  属性值flex首字母
-example：d-f{display:flex}
+使用属性值做为类名
 */
 
 .relative{
   position: relative;
+}
+
+.right{
+  float:right;
+}
+
+.none{
+  display: none;
 }

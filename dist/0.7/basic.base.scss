@@ -35,6 +35,15 @@ $countRemBase : 22;
   flex: $radio;
 }
 
+@mixin flex-auto() {
+  -webkit-box-flex: 1 auto;
+  -webkit-flex: 1 auto;
+  flex: 1 auto;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  flex: auto;
+}
+
 
 @mixin fz($fz:16rem){
   font-size:$fz/$fzBase;
@@ -75,8 +84,6 @@ $countRemBase : 22;
   -khtml-user-select: none; /*早期浏览器*/
   user-select: none;
 }
-
-
 
 .__flex{
   @include css3flex;

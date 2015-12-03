@@ -3,13 +3,15 @@
 
 @mixin css3flex(){
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
 
-@mixin flex-radio($radio: auto) {
+@mixin flex(){
+  @include css3flex;
+}
+
+@mixin flex-radio($radio: none) {
   -webkit-box-flex: $radio;
   -webkit-flex: $radio;
   flex: $radio;
@@ -53,4 +55,12 @@
   background-image: -ms-linear-gradient($from, $to);
   /* W3C */
   background-image: linear-gradient($from, $to);
+}
+
+
+@mixin overflow-scroll(){
+  overflow-x: hidden;
+  overflow-y: scroll;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }

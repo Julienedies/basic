@@ -24,11 +24,15 @@ $countRemBase : 22;
 @mixin css3flex(){
   display: -webkit-box;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
 @mixin flex(){
-  @include css3flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @mixin flex-radio($radio: none) {
@@ -44,6 +48,12 @@ $countRemBase : 22;
   -webkit-box-flex: 1;
   -webkit-flex: auto;
   flex: auto;
+}
+
+@mixin flex-1() {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
 }
 
 
@@ -77,6 +87,7 @@ $countRemBase : 22;
   background-image: linear-gradient($from, $to);
 }
 
+
 @mixin overflow-scroll(){
   overflow-x: hidden;
   overflow-y: scroll;
@@ -94,8 +105,14 @@ $countRemBase : 22;
   user-select: none;
 }
 
-.__flex{
+.__flex, .flex{
   @include css3flex;
+}
+
+.flex-1{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
 }
 
 .flex-middle{
@@ -170,23 +187,7 @@ w - > 颜色前缀
 
 /* k 各种灰色 数字越大，颜色越深 */
 
-.fc-k3{
-    color:#cccccc;
-}
-.fc-k4{
-    color: #969090;
-}
-.fc-k41{
-    color:#7a7a7a
-}
-.fc-k5{
-    color:#696969;
-}
 
-
-.fc-k7 {
-    color: #696969;
-}
 /*
 定义字体大小,相对于父元素
 fz -> font-size
@@ -206,65 +207,9 @@ x - > 区分 em rem
 .fz-x14 {
     font-size: 1.4em;
 }
-/*
-定义字体大小比例，相对于根元素字体设置
-fz -> font-size
-6  -> 6/10rem
 
-*/
-.fz-6{
-    font-size:0.6rem;
-}
-.fz-8{
-    font-size:0.8rem;
-}
-.fz-12{
-    font-size: 1.2rem;
-}
-.fz-14{
-    font-size: 1.4rem;
-}
-.fz-15{
-    font-size: 1.5rem;
-}
-.fz-16{
-    font-size: 1.6rem;
-}
-.fz-20{
-    font-size:2rem;
-}
-.fz-22{
-    font-size:2.2rem;
-}
-.fz-24{
-    font-size: 2.4rem;
-}
-.fz-26{
-    font-size:2.6rem;
-}
-.fz-28{
-    font-size:2.8rem;
-}
-.fz-30{
-    font-size:3rem;
-}
-.fz-32{
-    font-size:3.2rem;
-}
-.fz-36{
-    font-size:3.6rem;
-}
-.fz-40{
-    font-size:4rem;
-}
-/*
-t    为前缀；
--18  字体大小
--0   字体样式   0 ： normal； 1： bold;
--r1  字体颜色   r: red; b: blue; y: yellow; g: green; w: white; k: black; a: gray;
-*/
 
-.fz-small{
+.fz-sm{
     font-size:0.8em;
 }
 html {

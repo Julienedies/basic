@@ -4,11 +4,15 @@
 @mixin css3flex(){
   display: -webkit-box;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
 @mixin flex(){
-  @include css3flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @mixin flex-radio($radio: none) {
@@ -24,6 +28,12 @@
   -webkit-box-flex: 1;
   -webkit-flex: auto;
   flex: auto;
+}
+
+@mixin flex-1() {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
 }
 
 

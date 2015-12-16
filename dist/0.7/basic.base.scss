@@ -24,11 +24,15 @@ $countRemBase : 22;
 @mixin css3flex(){
   display: -webkit-box;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
 @mixin flex(){
-  @include css3flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @mixin flex-radio($radio: none) {
@@ -44,6 +48,12 @@ $countRemBase : 22;
   -webkit-box-flex: 1;
   -webkit-flex: auto;
   flex: auto;
+}
+
+@mixin flex-1() {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
 }
 
 
@@ -77,6 +87,7 @@ $countRemBase : 22;
   background-image: linear-gradient($from, $to);
 }
 
+
 @mixin overflow-scroll(){
   overflow-x: hidden;
   overflow-y: scroll;
@@ -94,8 +105,14 @@ $countRemBase : 22;
   user-select: none;
 }
 
-.__flex{
+.__flex, .flex{
   @include css3flex;
+}
+
+.flex-1{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
 }
 
 .flex-middle{

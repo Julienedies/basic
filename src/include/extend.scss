@@ -37,7 +37,14 @@
   @extend .__flex;
   -webkit-box-pack:justify;
   -webkit-justify-content:space-between;
-  justify-content:space-between
+  justify-content:space-between;
+}
+
+.flex-right{
+  @extend .__flex;
+  -webkit-box-pack:end;
+  -webkit-justify-content:flex-end;
+  justify-content:flex-end;
 }
 
 .flex-mc{
@@ -52,3 +59,8 @@
   @extend .flex-justify;
 }
 
+.flex-mr{
+  @extend .__flex;
+  @extend .flex-middle;
+  @extend .flex-right;
+}

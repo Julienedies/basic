@@ -18,6 +18,8 @@ $fzBase: 14;
 
 $countRemBase : 22;
 
+$xem: 0.0625rem;
+
 /*   define mixin
 ==========================================================*/
 
@@ -98,7 +100,7 @@ $countRemBase : 22;
 
 @mixin line-clamp($line:2){
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: $line;
   -webkit-box-orient: vertical;
   //-webkit-flex-direction:column;
   //flex-direction:column;
@@ -154,6 +156,13 @@ $countRemBase : 22;
   justify-content:flex-end;
 }
 
+.flex-end{
+  @extend .__flex;
+  -webkit-box-align:end;
+  -webkit-align-items:flex-end;
+  align-items:flex-end;
+}
+
 .flex-mc{
   @extend .__flex;
   @extend .flex-middle;
@@ -171,3 +180,5 @@ $countRemBase : 22;
   @extend .flex-middle;
   @extend .flex-right;
 }
+
+

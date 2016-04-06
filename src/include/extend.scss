@@ -47,6 +47,13 @@
   justify-content:flex-end;
 }
 
+.flex-end{
+  @extend .__flex;
+  -webkit-box-align:end;
+  -webkit-align-items:flex-end;
+  align-items:flex-end;
+}
+
 .flex-mc{
   @extend .__flex;
   @extend .flex-middle;
@@ -64,3 +71,4 @@
   @extend .flex-middle;
   @extend .flex-right;
 }
+

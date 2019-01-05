@@ -1,7 +1,7 @@
 basic
 =====
 
-basic是一个基于scss进行css开发的脚手架.
+basic是一个基于scss的常用的mixins和extend集合.
 
 
 

@@ -1,0 +1,19 @@
+{
+  "name": "@julienedies/basic",
+  "version": "0.7.0",
+  "description": "scss mixins",
+  "main": "basic.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Julienedies/basic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Julienedies/basic/issues"
+  },
+  "homepage": "https://github.com/Julienedies/basic#readme"
+}
